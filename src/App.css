@@ -1,3 +1,11 @@
 .bg-custom {
-    background-image: url('https://images.pexels.com/photos/1112080/pexels-photo-1112080.jpeg?cs=srgb&dl=pexels-flambo-388007-1112080.jpg&fm=jpg');
+    background-image: url('https://4kwallpapers.com/images/wallpapers/agriculture-farm-land-countryside-aerial-view-green-2880x1800-3985.jpg');
   }
+.bg-custom1{
+  background-image: radial-gradient(darkgreen , lightgreen);
+}
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
