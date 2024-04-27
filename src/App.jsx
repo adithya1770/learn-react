@@ -2,11 +2,11 @@ import { useState } from 'react'
 import './App.css'
 import { supabase }  from './Supabase/supabase'
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
-import Login from "../pages/login"
-import Weather from '../pages/weather'
-import Plants from '../pages/plants'
-import News from '../pages/news'
-import Transaction from '../pages/transaction'
+import Login from './pages/login';
+import Weather from './pages/weather'
+import Plants from './pages/plants'
+import Transaction from './pages/transaction'
+import News from './pages/news'
 
 function App() {
 
@@ -34,12 +34,12 @@ function App() {
             <a href="/transaction"><span class="material-symbols-outlined pl-16 pr-16 text-4xl hover:text-green-500">paid</span></a>
         </div>
         <div class="h-32 w-full bg-green-600 absolute bottom-0">
+
           <center>
-            <hr />
           <footer className='poppins-bold'>
             <p><b>| Adithya P S |</b></p>
             <p>Contact me at:</p>
-            <gmail><i>bytesadithya@gmail.com</i></gmail>
+            <p><i>bytesadithya@gmail.com</i></p>
             <div className="poppins-bold">
             <center>
                     Enter your Feedback  <br /><input type="text" placeholder='enter feedback' class="text-black"  onChange={(e) => setfeedBack(e.target.value)}/> 
