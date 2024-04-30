@@ -2,10 +2,22 @@
     background-image: url('https://4kwallpapers.com/images/wallpapers/agriculture-farm-land-countryside-aerial-view-green-2880x1800-3985.jpg');
   }
 .bg-custom1{
-  background-image: radial-gradient(darkgreen , lightgreen);
+  background-image: url("https://pixexid.com/api/download/image/cabbage-x4kj7jfs.jpeg");
 }
 .poppins-bold {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+.shadow-trans{
+  text-shadow:2px 2px 2px black ;
+}
+img{
+  mix-blend-mode: multiply;
+}
+.z-negative{
+  z-index: -10;
+}
+.img-cont{
+  filter: contrast(500%);
 }

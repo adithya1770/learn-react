@@ -19,8 +19,11 @@ function Plants(){
 
     return(
         <div className="poppins-bold">
+          <p class="text-8xl font-normal pl-10 tracking-wide text-white poppins-bold absolute top-4 antialiased">Farmy</p>
+          <p className="absolute right-20 top-40">Beta Version v1.0A</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732090.png" alt="https://w7.pngwing.com/pngs/1022/900/png-transparent-open-opensource-source-logos-and-brands-line-filled-icon.png" className="h-10 w-10 absolute right-5 top-36" />
             <center>
-            <br /><p className="text-8xl text-white">HortiFind</p><br />
+            <br /><p className="text-8xl text-white shadow-trans">HortiFind</p><br />
             <input type="text" id="plantName" name="plantName" className="placeholder-black rounded-3xl w-80 h-10 text-center" placeholder="Enter Plant Name" onChange={(e) => setplantName(e.target.value)}/>
             <button onClick={plantData} className="h-10 w-40 bg-black text-white rounded-3xl">Click</button>
             <div>

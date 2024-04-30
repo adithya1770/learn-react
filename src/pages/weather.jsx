@@ -19,8 +19,11 @@ function Weather(){
 
     return(
         <div className="poppins-bold">
+            <p class="text-8xl font-normal pl-10 tracking-wide text-white poppins-bold absolute top-4 antialiased">Farmy</p>
+            <p className="absolute right-20 top-40">Beta Version v1.0A</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732090.png" alt="https://w7.pngwing.com/pngs/1022/900/png-transparent-open-opensource-source-logos-and-brands-line-filled-icon.png" className="h-10 w-10 absolute right-5 top-36" />
                 <center><br />
-                <p className="text-white text-8xl">Weather</p>
+                <p className="text-white text-8xl shadow-trans">Weather</p>
                 <br />
                 <p className="text-white text-4xl">TEMPERATURE - {tempData}C</p>
                 <p className="text-white text-4xl">HUMIDITY - {humidityData}%</p>
