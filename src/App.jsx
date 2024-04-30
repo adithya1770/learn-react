@@ -18,7 +18,8 @@ function App() {
     const sendFeed = async () => {
         const { error } = await supabase.from('feedback').insert({feed_back:feedBack})
         if (!error) {
-          console.log("data inserted successfully")
+          const msgEle = document.getElementById("Message");
+          msgEle.innerText = "Feedback Submitted!"
         }
     }
 
@@ -49,7 +50,8 @@ function App() {
         </div>
         <div className="poppins-bold absolute bottom-5 pl-160">
                     <br /><input type="text" placeholder='Enter Feedback' class="text-black"  onChange={(e) => setfeedBack(e.target.value)} className='text-center placeholder-black h-10 w-64 rounded-full'/> <br />
-                    <center><button onClick={sendFeed} className='pl-5 w-20 h-10 text-center text-xl text-white rounded-full'>Send!</button></center>
+                    <center><button onClick={sendFeed} className='pl-5 w-20 h-10 text-center text-xl text-white rounded-full'>Send!</button>
+                    <p id="Message" className='text-white' ></p></center>
             </div>
         <div>
         <Routes>
