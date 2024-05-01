@@ -8,9 +8,10 @@ function News(){
 
     const newsData = async () => {
         const newsdata = await axios.get("https://api.thenewsapi.com/v1/news/top?api_token=zBaMNZbNofgnCa6ccBgvmYxwXBnEmyZGL2wKxm4E&locale=us&limit=3")
-        var newsTitle = newsdata['data']['data'][0]['title'];
-        var newsLink = newsdata['data']['data'][0]['url'];
-        var newsImg = newsdata['data']['data'][0]['image_url'];
+        const randEle = Math.ceil(Math.random()*4)
+        var newsTitle = newsdata['data']['data'][randEle]['title'];
+        var newsLink = newsdata['data']['data'][randEle]['url'];
+        var newsImg = newsdata['data']['data'][randEle]['image_url'];
         setNewsTitle(newsTitle);
         setNewsLink(newsLink);
         setNewsImage(newsImg);
