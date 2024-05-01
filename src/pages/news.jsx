@@ -7,12 +7,10 @@ function News(){
     const [newsImg , setNewsImage] = useState(null)
 
     const newsData = async () => {
-        const newsdata = await axios.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=723e5c7c20c9473085b57c52196d02f7")
-        console.log(newsdata)
-        const newsNum = Math.ceil(Math.random()*10);
-        var newsTitle = newsdata['data']['articles'][1]['title'];
-        var newsLink = newsdata['data']['articles'][1]['url'];
-        var newsImg = newsdata['data']['articles'][1]['urlToImage'];
+        const newsdata = await axios.get("https://api.thenewsapi.com/v1/news/top?api_token=zBaMNZbNofgnCa6ccBgvmYxwXBnEmyZGL2wKxm4E&locale=us&limit=3")
+        var newsTitle = newsdata['data']['data'][0]['title'];
+        var newsLink = newsdata['data']['data'][0]['url'];
+        var newsImg = newsdata['data']['data'][0]['image_url'];
         setNewsTitle(newsTitle);
         setNewsLink(newsLink);
         setNewsImage(newsImg);
