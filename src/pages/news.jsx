@@ -7,7 +7,8 @@ function News(){
     const [newsImg , setNewsImage] = useState(null)
 
     const newsData = async () => {
-        const newsdata = await axios.get("https://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=723e5c7c20c9473085b57c52196d02f7")
+        const newsdata = await axios.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=723e5c7c20c9473085b57c52196d02f7")
+        console.log(newsdata)
         const newsNum = Math.ceil(Math.random()*10);
         var newsTitle = newsdata['data']['articles'][1]['title'];
         var newsLink = newsdata['data']['articles'][1]['url'];
