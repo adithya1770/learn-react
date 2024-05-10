@@ -7,7 +7,7 @@ function Plants(){
 
 
     const plantData = async () => {
-        const plant = await fetch("https://trefle.io/api/v1/plants?token=FyOBHT6SRBLG8hTsL12B3rqmnBPis2TgRgLHqdlVP7A");
+        const plant = await fetch("http://localhost:3000/");
         const dataBlock1 = await plant.json()
         for( let i=0; i<=19; i++){
           if(plantName == dataBlock1['data'][i]['common_name']){
