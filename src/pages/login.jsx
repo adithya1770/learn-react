@@ -71,12 +71,12 @@ function Login(){
       <p class="text-8xl font-normal pl-10 tracking-wide text-white poppins-bold absolute top-4 antialiased">Farmy</p>
       <div>
       <p className="text-8xl text-white shadow-trans">Accounts</p>
-      <input className="placeholder-black h-12 w-96 rounded-3xl text-center mt-5" type="text" required placeholder="User Name" onChange={(e) => setUser(e.target.value)} /> <br />
-      <input className="placeholder-black h-12 w-96 rounded-3xl text-center mt-3" type="email" required placeholder="Email" onChange={(e) => setEmail(e.target.value)} /> <br />
-      <input className="placeholder-black h-12 w-96 rounded-3xl text-center mt-3" type="password" required placeholder="Password" onChange={(e) => setPassword(e.target.value)} /> <br />
-      <button className="bg-black h-10 w-32 text-white rounded-xl mt-3 mr-2 ml-2" onClick={handleSignUp}>Sign Up</button>
-      <button className="bg-black h-10 w-32 text-white rounded-xl mt-4 mr-4 ml-2" onClick={handleSignIn}>Sign In</button>
-      <button className="bg-black h-10 w-32 text-white rounded-xl mt-4 mr-4" onClick={signOut}>Sign out</button> 
+      <input className="placeholder-black h-12 w-96 rounded-3xl text-center mt-5 text-3xl" type="text" required placeholder="User Name" onChange={(e) => setUser(e.target.value)} /> <br />
+      <input className="placeholder-black h-12 w-96 rounded-3xl text-center mt-3 text-3xl" type="email" required placeholder="Email" onChange={(e) => setEmail(e.target.value)} /> <br />
+      <input className="placeholder-black h-12 w-96 rounded-3xl text-center mt-3 text-3xl" type="password" required placeholder="Password" onChange={(e) => setPassword(e.target.value)} /> <br />
+      <button className="bg-black h-10 w-32 text-white rounded-xl mt-3 mr-2 ml-2 text-2xl" onClick={handleSignUp}>Sign Up</button>
+      <button className="bg-black h-10 w-32 text-white rounded-xl mt-4 mr-4 ml-2 text-2xl" onClick={handleSignIn}>Sign In</button>
+      <button className="bg-black h-10 w-32 text-white rounded-xl mt-4 mr-4 text-2xl" onClick={signOut}>Sign out</button> 
       <p id="AuthPck" className="text-3xl text-black italic absolute top-36 right-10"></p>
       <p id="authResp" className="text-4xl text-black mt-5 italic pt-1"></p>
       </div> 
