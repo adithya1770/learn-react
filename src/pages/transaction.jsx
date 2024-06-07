@@ -7,7 +7,7 @@ function Transaction(){
     const [accNum , setaccNum] = useState();
     const [accNumber, setaccNumber] = useState();
     const [transDet, settransDet] = useState([]);
-
+    const [vals, setVals] = useState("");
 
     const tranSact = async () => {
         const alphaStr = 'abcdefghijklmnopqrstuvwxyz';
@@ -34,13 +34,33 @@ function Transaction(){
       const { data, error } = await supabase.from('transactions').select('*').eq('account', accNumber)
       if(!error){
         settransDet(data);
+        const msg = document.getElementById("msg");
+        msg.innerText = "Details Retrived and File Generated";
       }
+    }
+
+    const downloadInfo = () => {
+        const transData = transDet.map(item => item.trans_id).join("\n");
+        const transAcc = transDet.map(item => item.account).join("\n");
+        const transDate = transDet.map(item => item.date).join("\n");
+        const transPrice = transDet.map(item => item.price).join("\n");
+        const infoBlob = new Blob([transData, transAcc, transDate, transPrice], { type: 'text/plain' });
+        const element = document.createElement("a");
+        element.href = URL.createObjectURL(infoBlob);
+        element.download = "RetrivedTransactionDetails.txt";
+        element.click();
+        const msg = document.getElementById("msg");
+        msg.innerText = "File Downloaded";
+
     }
 
     return(
         <div className="poppins-bold">
           <p class="text-8xl font-normal pl-10 tracking-wide text-white poppins-bold absolute top-4 antialiased">Farmy</p>
           <p className="absolute right-20 top-40">Beta Version v1.0A</p>
+          <div className='h-24 w-24 bg-white absolute right-12 rounded-2xl top-6'>
+              <a href="/"><img src="https://png.pngtree.com/png-clipart/20230209/original/pngtree-banyan-tree-png-image_8948930.png" className='sticky h-24 w-24 top-3 right-5'/></a>
+            </div>
         <img src="https://cdn-icons-png.flaticon.com/512/732/732090.png" alt="https://w7.pngwing.com/pngs/1022/900/png-transparent-open-opensource-source-logos-and-brands-line-filled-icon.png" className="h-10 w-10 absolute right-5 top-36" />
           <center><br />
           <p className="text-white text-8xl shadow-trans">Transaction</p><br />
@@ -55,18 +75,11 @@ function Transaction(){
               <p>Account Transaction Detail Retriver System</p><br /><br />
           <input type="text" placeholder="Account Number" className="placeholder-black text-black w-64 h-10 text-2xl rounded-3xl text-center" onChange={(e)=>{setaccNumber(e.target.value)}} /> <br /><br />
             <button onClick={detail} className="bg-black h-8 w-32 text-white text-xl rounded-3xl">Retrive</button>
-            {transDet.map((detail) => (
-              <div>
-                <hr />
-              <p className="inline-block">|Transaction ID : {detail.trans_id} |</p>
-              <p className="inline-block">Price : {detail.price}|</p>
-              <p className="inline-block">A/C Number : {detail.account}|</p>
-              <p>|Date of Transaction : {detail.date}|</p>
-              </div>
-            ))}
+            <button onClick={downloadInfo} className="bg-black h-8 w-32 text-white text-xl rounded-3xl">Download</button>
+            <p id="msg" className="text-2xl mt-2"></p>
             </center>
           </div>
-          <p className="absolute bottom-30 left-128 text-3xl text-white rounded-full text-center" id="Message"></p>
+          <p className="absolute bottom-34 right-128 text-3xl text-white rounded-full text-center" id="Message"></p>
         </div>
     )
 }

@@ -2,22 +2,26 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function News(){
-    const [newsTitle, setNewsTitle] = useState(null)
-    const [newsLink , setNewsLink] = useState(null)
-    const [newsImg , setNewsImage] = useState(null)
+    const [newsTitle, setNewsTitle] = useState("")
+    const [newsLink , setNewsLink] = useState("")
+    const [newsImg , setNewsImage] = useState("")
 
     const newsData = async () => {
-        const newsdata = await axios.get("https://api.thenewsapi.com/v1/news/top?api_token=zBaMNZbNofgnCa6ccBgvmYxwXBnEmyZGL2wKxm4E&locale=us&limit=3")
-        const randEle = Math.ceil(Math.random()*2)
-        var newsTitle = newsdata['data']['data'][randEle]['title'];
-        var newsLink = newsdata['data']['data'][randEle]['url'];
-        var newsImg = newsdata['data']['data'][randEle]['image_url'];
+        const newsdata = await axios.get("https://inshortsapi.vercel.app/news?category=national")
+        const randEle = Math.ceil(Math.random()*10)
+        var newsTitle = newsdata['data']["data"][randEle]["title"];
+        var newsUrl = newsdata['data']["data"][randEle]["url"];
+        var newsImgurl = newsdata['data']["data"][randEle]["imgUrl"];
+        setNewsImage(newsImgurl);
+        setNewsLink(newsUrl);
         setNewsTitle(newsTitle);
-        setNewsLink(newsLink);
-        setNewsImage(newsImg);
     }
 
     return(
+          <div>
+            <div className='h-24 w-24 bg-white absolute right-12 rounded-2xl top-6'>
+              <a href="/"><img src="https://png.pngtree.com/png-clipart/20230209/original/pngtree-banyan-tree-png-image_8948930.png" className='sticky h-24 w-24 top-3 right-5'/></a>
+            </div>
         <center>
           <p class="text-8xl font-normal pl-10 tracking-wide text-white poppins-bold absolute top-4 antialiased">Farmy</p>
           <p className="absolute right-20 top-40">Beta Version v1.0A</p>
@@ -31,6 +35,7 @@ function News(){
         </div>
         <p className="absolute bottom-44 left-128 text-3xl text-white shadow-trans">Click on  <i className="pl-2 pr-2"><strong>Get News</strong></i>to Refresh News!</p>
         </center>
+        </div>
     )
 }
 

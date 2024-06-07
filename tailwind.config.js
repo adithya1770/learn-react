@@ -10,6 +10,7 @@ export default {
       spacing: {
         '128': '32rem',
         '160': '40rem',
+        '168': '44rem',
         '192': '48rem',
         '224': '56rem',
         '256': '64rem',

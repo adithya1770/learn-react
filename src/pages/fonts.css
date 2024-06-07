@@ -105,4 +105,7 @@
     font-weight: 900;
     font-style: italic;
   }
-
+.fonter{
+    font-size: 250px;
+    text-shadow: 5px 5px green;
+  }

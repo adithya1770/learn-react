@@ -10,25 +10,23 @@ import News from './pages/news'
 import Filesys from './pages/filesystem'
 import Produce from './pages/produce';
 import Docs from './pages/docs';
+import Home from './pages/home';
 
 function App() {
 
-  const [feedBack, setfeedBack] = useState("")
+  const [feedBack, setfeedBack] = useState("");
+  const [message, setMessage] = useState("")
 
     const sendFeed = async () => {
         const { error } = await supabase.from('feedback').insert({feed_back:feedBack})
         if (!error) {
-          const msgEle = document.getElementById("Message");
+          const msgEle = document.getElementById("Message1");
           msgEle.innerText = "Feedback Submitted!"
         }
     }
 
   return (
       <div class="h-screen w-screen bg-cover bg-center bg-no-repeat bg-custom poppins-bold">
-        <div className='h-24 w-24 bg-white absolute right-12 rounded-2xl top-6'>
-        <a href="/"><img src="https://png.pngtree.com/png-clipart/20230209/original/pngtree-banyan-tree-png-image_8948930.png" className='sticky h-24 w-24 top-3 right-5'/></a>
-        </div>
-        <p class="text-8xl font-normal pl-10 tracking-wide text-white poppins-bold absolute top-4 antialiased">Farmy</p>
         <div className='h-full w-full bg-white bg-opacity-20'>
         <div class="flex h-36 w-45 bg-custom1 bg-cover bg-no-repeat bg-opacity-50 p-4">
         </div>
@@ -51,10 +49,11 @@ function App() {
         <div className="poppins-bold absolute bottom-5 pl-160">
                     <br /><input type="text" placeholder='Enter Feedback' class="text-black"  onChange={(e) => setfeedBack(e.target.value)} className='text-center placeholder-black h-10 w-64 rounded-full'/> <br />
                     <center><button onClick={sendFeed} className='pl-5 w-20 h-10 text-center text-xl text-white rounded-full'>Send!</button>
-                    <p id="Message" className='text-white' ></p></center>
+                    <p id="Message1" className='text-white' ></p></center>
             </div>
         <div>
         <Routes>
+          <Route path="/" element={<Home />}/>
           <Route path="/login" element={<Login />}/>
           <Route path="/weather" element={<Weather />} />
           <Route path="/plants" element={<Plants />}/>

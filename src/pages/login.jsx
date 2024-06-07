@@ -2,65 +2,87 @@ import { useState } from "react";
 import { supabase } from "../Supabase/supabase";
 
 function Login(){
-    const [user, setUser] = useState("");
-    const [psw, setPsw] = useState("");
-    const [auser, setaUser] = useState("");
-    const [apsw, setaPsw] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [user, setUser] = useState("");
+  const [loggedIn, setLoggedIn] = useState(0);
 
-    const credUpload = async () => {    
-        const { error } = await supabase.from('user_details').insert({username:user,password:psw})
-            if (!error) {
-              if (!error) {
-                const displayEle = document.getElementById("Message");
-                displayEle.innerText = 'Account Created Succesfully!';
-              }
-            }
+  const handleSignUp = async () => {
+    const { session, error } = await supabase.auth.signUp({ email, password });
+    if (error){
+      const resp = document.getElementById("authResp");
+      resp.innerText = "Error signing up\t";
+      console.error('Error signing up:', error.message);
+    } 
+    else{
+      const { error } = await supabase.from('user_details').insert({ username: user, password: password })
+      const resp = document.getElementById("authResp");
+      resp.innerText = "User signed up\t";
+      console.log('User signed up:', user);
+    }
+  };
+
+  const handleSignIn = async () => {
+    const { session, error } = await supabase.auth.signInWithPassword({ email, password });
+    if (error){
+      console.error('Error signing in:', error.message);
+      const authCred = document.getElementById("AuthResp");
+      authCred.innerText = "Error signing in";
+    }
+    else{
+      const { error } = await supabase.from('logger').insert({ username: user})
+      if(error){
+        console.log("Developer Issue")
       }
-    
-    const authUpload = async () => {
-        const { data, error } = await supabase
-            .from('user_details')
-            .select('*')
-            for(let i in data){
-              if(auser === data[i].username && apsw === data[i].password){
-                const displayEle = document.getElementById("Message");
-                displayEle.innerText = 'Succesfully Logged In!';
-              }
-              else{
-                console.log("wrong credentials");
-              }
-            }
-            
+      console.log('User signed in:', user);
+      const authCred = document.getElementById("AuthPck");
+      authCred.innerText = "Welcome\t"+user;
+      setLoggedIn(1);
+    }
+  };
+
+  const signOut = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      const authCred = document.getElementById("authResp");
+      authCred.innerText = 'Error signing out';
+      console.error('Error signing out:', error.message);
+    } else {
+      if(loggedIn === 1){
+        const authCred = document.getElementById("authResp");
+        authCred.innerText = 'User signed out successfully';
+        console.log('User signed out successfully');
       }
-
-    return(
-        <div className="poppins-bold">
-          <center>
-            <br />
-                <div  class="inline-block">
-                <p className="text-8xl text-white shadow-trans">Sign Up</p><br />
-                <input placeholder="Enter your User" class="placeholder-black rounded-xl h-10 w-90 text-center" type="text" name="user" id="user" onChange={(e) => {setUser(e.target.value)}}/>
-                <br /><br />
-                <input type="password" placeholder="Enter your Password" class="placeholder-black h-10 w-90 rounded-xl text-center" name="psw" id="psw" onChange={(e) => {setPsw(e.target.value)}}/>
-                <br /><br />
-                <button onClick={credUpload} class="bg-black text-white rounded-3xl h-10 w-32">Sign UP</button>
-                </div>
-                <div class="inline-block pl-32 h-100 w-100">
-                  <br />
-                <p className="text-8xl text-white shadow-trans">Log In</p><br />
-                <input type="text" placeholder="Enter your User" class="placeholder-black h-10 w-90 rounded-xl text-center" name="auser" id="auser" onChange={(e) => {setaUser(e.target.value)}}/>
-                <br /><br />
-                <input placeholder="Enter your Password" class="placeholder-black h-10 w-90 rounded-xl text-center" type="password" name="apsw" id="apsw" onChange={(e) => {setaPsw(e.target.value)}}/>
-                <br /><br />
-                <button onClick={authUpload} class="bg-black h-10 w-32 text-white rounded-3xl">Log IN</button>
-                </div>
-            <p class="absolute top-36 right-10 font-extrabold italic text-2xl">Welcome {auser}</p> 
-          </center>
-          <p className="absolute bottom-36 left-128 text-5xl text-white rounded-full text-center" id="Message"></p>
-        </div>
-    )
+      else{
+        const authCred = document.getElementById("authResp");
+        authCred.innerText = 'User not logged in';
+        console.log('User not logged in');
+      }
+    }
+  };
 
 
+  return (
+    <div>
+      <div className='h-24 w-24 bg-white absolute right-12 rounded-2xl top-6'>
+      <a href="/"><img src="https://png.pngtree.com/png-clipart/20230209/original/pngtree-banyan-tree-png-image_8948930.png" className='sticky h-24 w-24 top-3 right-5'/></a>
+      </div>
+      <center>
+      <p class="text-8xl font-normal pl-10 tracking-wide text-white poppins-bold absolute top-4 antialiased">Farmy</p>
+      <div>
+      <p className="text-8xl text-white shadow-trans">Accounts</p>
+      <input className="placeholder-black h-12 w-96 rounded-3xl text-center mt-5" type="text" required placeholder="User Name" onChange={(e) => setUser(e.target.value)} /> <br />
+      <input className="placeholder-black h-12 w-96 rounded-3xl text-center mt-3" type="email" required placeholder="Email" onChange={(e) => setEmail(e.target.value)} /> <br />
+      <input className="placeholder-black h-12 w-96 rounded-3xl text-center mt-3" type="password" required placeholder="Password" onChange={(e) => setPassword(e.target.value)} /> <br />
+      <button className="bg-black h-10 w-32 text-white rounded-xl mt-3 mr-2 ml-2" onClick={handleSignUp}>Sign Up</button>
+      <button className="bg-black h-10 w-32 text-white rounded-xl mt-4 mr-4 ml-2" onClick={handleSignIn}>Sign In</button>
+      <button className="bg-black h-10 w-32 text-white rounded-xl mt-4 mr-4" onClick={signOut}>Sign out</button> 
+      <p id="AuthPck" className="text-3xl text-black italic absolute top-36 right-10"></p>
+      <p id="authResp" className="text-4xl text-black mt-5 italic pt-1"></p>
+      </div> 
+      </center>
+    </div>
+  );
 }
 
 export default Login
