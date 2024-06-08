@@ -64,18 +64,18 @@ function Transaction(){
         <img src="https://cdn-icons-png.flaticon.com/512/732/732090.png" alt="https://w7.pngwing.com/pngs/1022/900/png-transparent-open-opensource-source-logos-and-brands-line-filled-icon.png" className="h-10 w-10 absolute right-5 top-36" />
           <center><br />
           <p className="text-white text-8xl shadow-trans">Transaction</p><br />
-          <input type="text" placeholder="Price" className="placeholder-black w-64 h-10 text-2xl rounded-3xl text-center" onChange={(e)=>{setTransaction(e.target.value)}} /> <br /><br />
-          <input type="phone" placeholder="Account Number" className="placeholder-black w-64 h-10 text-2xl rounded-3xl text-center" onChange={(e)=>{setaccNum(e.target.value)}} /> <br /><br />
-          <input type="date" className="placeholder-black w-64 h-10 rounded-3xl text-center text-2xl" onChange={(e)=>{setDate(e.target.value)}}/> <br /><br />
-          <button onClick={tranSact} class="bg-black h-10 w-32 text-white rounded-3xl">Record</button>
+          <input type="text" placeholder="Price" className="placeholder-black w-64 h-10 text-2xl rounded-3xl text-center border-2 border-black hover:shadow-2xl" onChange={(e)=>{setTransaction(e.target.value)}} /> <br /><br />
+          <input type="phone" placeholder="Account Number" className="placeholder-black w-64 h-10 text-2xl rounded-3xl text-center border-2 border-black hover:shadow-2xl" onChange={(e)=>{setaccNum(e.target.value)}} /> <br /><br />
+          <input type="date" className="placeholder-black w-64 h-10 rounded-3xl text-center text-2xl border-2 border-black hover:shadow-2xl" onChange={(e)=>{setDate(e.target.value)}}/> <br /><br />
+          <button onClick={tranSact} class="bg-black h-10 w-32 text-white rounded-3xl border-2 border-white hover:text-black hover:bg-white">Record</button>
           </center>
           <div className="h-100 w-96 bg-black text-white absolute top-52 left-2 text-sm rounded-3xl ">
             <center>
               <br />
               <p>Account Transaction Detail Retriver System</p><br /><br />
           <input type="text" placeholder="Account Number" className="placeholder-black text-black w-64 h-10 text-2xl rounded-3xl text-center" onChange={(e)=>{setaccNumber(e.target.value)}} /> <br /><br />
-            <button onClick={detail} className="bg-black h-8 w-32 text-white text-xl rounded-3xl">Retrive</button>
-            <button onClick={downloadInfo} className="bg-black h-8 w-32 text-white text-xl rounded-3xl">Download</button>
+            <button onClick={detail} className="bg-black h-8 w-32 text-white text-xl rounded-3xl border-2 border-white hover:text-black hover:bg-white">Retrive</button>
+            <button onClick={downloadInfo} className="bg-black h-8 w-32 text-white text-xl rounded-3xl border-2 border-white hover:text-black hover:bg-white">Download</button>
             <p id="msg" className="text-2xl mt-2"></p>
             </center>
           </div>

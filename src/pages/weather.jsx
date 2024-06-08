@@ -32,7 +32,7 @@ function Weather(){
                 <p className="text-white text-4xl">HUMIDITY - {humidityData}%</p>
                 <p className="text-white text-4xl">WINDSPEED - {windData}Kmph</p>
                 <br />
-                <button onClick={weatherData} className="text-white text-2xl h-10 w-40 bg-black rounded-3xl">Generate</button>
+                <button onClick={weatherData} className="text-white text-2xl h-10 w-40 bg-black rounded-3xl border-2 border-white hover:text-black hover:bg-white">Generate</button>
                 </center>
         </div>
     )

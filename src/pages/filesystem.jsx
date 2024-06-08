@@ -40,17 +40,17 @@ function Filesys(){
             <center>
                 <div className="h-100 w-64 bg-white bg-opacity-20 rounded-3xl absolute left-128 top-72">
                 <br />
-                <input type="text" onChange={(e) => {setfileName(e.target.value)}} placeholder="File Description" className="placeholder-black h-10 w-64 rounded-3xl text-center"/><br/><br />
-                <input type="text" onChange={(e) => {setName(e.target.value)}} placeholder="User Name"  className="placeholder-black h-10 w-64 rounded-3xl text-center"/> <br /><br />
+                <input type="text" onChange={(e) => {setfileName(e.target.value)}} placeholder="File Description" className="placeholder-black h-10 w-64 rounded-3xl text-center border-2 border-black hover:shadow-2xl"/><br/><br />
+                <input type="text" onChange={(e) => {setName(e.target.value)}} placeholder="User Name"  className="placeholder-black h-10 w-64 rounded-3xl text-center border-2 border-black hover:shadow-2xl"/> <br /><br />
                 <input type="file" onChange={(e) => {setFile(e.target.files[0])}} className="text-white"/> <br /><br />
-                <button onClick={storage} className="h-10 w-32 bg-black text-white rounded-3xl">Upload</button>
+                <button onClick={storage} className="h-10 w-32 bg-black text-white rounded-3xl border-2 border-white hover:text-black hover:bg-white">Upload</button>
                 </div>
                 <div className="absolute top-80 right-96 h-100 w-80 bg-white bg-opacity-20 rounded-3xl "><br />
                     <p className="text-white">Auto File Retrival System</p><br />
-                    <input type="text" onChange={(e) => {setRetrive(e.target.value)}} placeholder="Exact Filename with Extension" className="placeholder-black rounded-3xl text-center h-10 w-72" /> <br /><br />
-                    <button onClick={retrive} className="h-10 w-32 bg-black text-white rounded-3xl">Retrive</button>
+                    <input type="text" onChange={(e) => {setRetrive(e.target.value)}} placeholder="Exact Filename with Extension" className="placeholder-black rounded-3xl text-center h-10 w-72 border-2 border-black hover:shadow-2xl" /> <br /><br />
+                    <button onClick={retrive} className="h-10 w-32 bg-black text-white rounded-3xl border-2 border-white hover:text-black hover:bg-white">Retrive</button>
                 </div>
-                <p className="absolute bottom-48 right-96 h-10 w-80 pt-2 text-xl bg-black text-white rounded-full text-center" id="Message">No File Uploaded</p>
+                <p className="absolute bottom-48 right-96 h-10 w-80 pt-2 text-xl bg-black text-white rounded-full text-center " id="Message">No File Uploaded</p>
             </center>
         </div>
     )

@@ -37,13 +37,13 @@ function Produce(){
             <img src="https://cdn-icons-png.flaticon.com/512/732/732090.png" alt="https://w7.pngwing.com/pngs/1022/900/png-transparent-open-opensource-source-logos-and-brands-line-filled-icon.png" className="h-10 w-10 absolute right-5 top-36" />
             <p className="text-8xl text-white shadow-trans pl-5">MarketPlace</p>
             <div className="pl-10"><br />
-            <input type="text" placeholder="Produce Name" onChange={(e) => {setproduceName(e.target.value)}} className="placeholder-black w-64 h-10 text-2xl rounded-3xl text-center"/> <br /><br />
-            <input type="text" placeholder="Produce Cost" onChange={(e) => {setproduceCost(e.target.value)}} className="placeholder-black w-64 h-10 text-2xl rounded-3xl text-center"/> <br /><br />
-            <input type="text" placeholder="Seller Name" onChange={(e) => {setsellerName(e.target.value)}} className="placeholder-black w-64 h-10 text-2xl rounded-3xl text-center" /> <br /><br />
-            <input type="text" placeholder="Quantity (Kgs)" onChange={(e) => {setquantity(e.target.value)}} className="placeholder-black w-64 h-10 text-2xl rounded-3xl text-center"/> <br /><br />
-            <button onClick={prod} className="text-3xl bg-black h-10 w-64 text-white rounded-3xl text-center absolute left-80 top-80">Publish</button><br />
+            <input type="text" placeholder="Produce Name" onChange={(e) => {setproduceName(e.target.value)}} className="placeholder-black w-64 h-10 text-2xl rounded-3xl text-center border-2 border-black hover:shadow-2xl"/> <br /><br />
+            <input type="text" placeholder="Produce Cost" onChange={(e) => {setproduceCost(e.target.value)}} className="placeholder-black w-64 h-10 text-2xl rounded-3xl text-center border-2 border-black hover:shadow-2xl"/> <br /><br />
+            <input type="text" placeholder="Seller Name" onChange={(e) => {setsellerName(e.target.value)}} className="placeholder-black w-64 h-10 text-2xl rounded-3xl text-center border-2 border-black hover:shadow-2xl" /> <br /><br />
+            <input type="text" placeholder="Quantity (Kgs)" onChange={(e) => {setquantity(e.target.value)}} className="placeholder-black w-64 h-10 text-2xl rounded-3xl text-center border-2 border-black hover:shadow-2xl"/> <br /><br />
+            <button onClick={prod} className="text-3xl bg-black h-10 w-64 text-white rounded-3xl text-center absolute left-80 top-80 border-2 border-white hover:text-black hover:bg-white">Publish</button><br />
             </div><br />
-            <button onClick={view} className="text-3xl bg-black h-10 w-64 text-white rounded-3xl text-center absolute left-80 top-96">View Details</button>
+            <button onClick={view} className="text-3xl bg-black h-10 w-64 text-white rounded-3xl text-center absolute left-80 top-96 border-2 border-white hover:text-black hover:bg-white">View Details</button>
             <div className="absolute right-20 h-96 top-52 w-160 text-center bg-white rounded-3xl bg-opacity-70">
             <p className="text-center absolute top-40 left-1 text-yellow-50 text-6xl">Data will be visible here</p>
             {dat.map((dataify) => (
