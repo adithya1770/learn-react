@@ -29,6 +29,14 @@ export default {
         '224': '56rem',
         '256': '64rem',
       },
+      fontSize: {
+        '10xl': '10rem',
+        '11xl': '11rem',
+        '12xl': '20rem',
+        '15xl': '40rem',
+        '20xl': '56rem',
+        '22xl': '64rem',
+      }
     },
   },
   plugins: [],

@@ -30,27 +30,28 @@ function Filesys(){
 
     return(
         <div className="poppins-bold">
-        <div className='h-24 w-24 bg-white absolute right-12 rounded-2xl top-6'>
+        <div className='h-24 w-24 bg-white absolute right-12 rounded-2xl top-6 lg:opacity-100 opacity-0'>
         <a href="/"><img src="https://png.pngtree.com/png-clipart/20230209/original/pngtree-banyan-tree-png-image_8948930.png" className='sticky h-24 w-24 top-3 right-5'/></a>
         </div> 
-        <p class="text-8xl font-normal pl-10 tracking-wide text-white poppins-bold absolute top-4 antialiased">Farmy</p>
-        <p className="absolute right-20 top-40">Beta Version v1.0A</p>
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732090.png" alt="https://w7.pngwing.com/pngs/1022/900/png-transparent-open-opensource-source-logos-and-brands-line-filled-icon.png" className="h-10 w-10 absolute right-5 top-36" />
-        <p className="text-center text-white text-8xl shadow-trans">Document Locker</p>
+        <p class="text-8xl font-normal pl-6 tracking-wide text-white poppins-bold absolute top-4 antialiased">Farmy</p>
+        <p className="absolute lg:right-20 lg:top-40 right-2 top-36 lg:opacity-100 opacity-0">Beta Version v1.0A</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732090.png" alt="https://w7.pngwing.com/pngs/1022/900/png-transparent-open-opensource-source-logos-and-brands-line-filled-icon.png" className="lg:h-10 lg:w-10 h-7 w-7 absolute lg:right-5 lg:top-36 top-36 right-1 lg:opacity-100 opacity-0" />
+        <p className="text-center text-white lg:text-8xl text-4xl shadow-trans lg:pt-0 pt-2">Document Locker</p>
             <center>
-                <div className="h-100 w-64 bg-white bg-opacity-20 rounded-3xl absolute left-128 top-72">
-                <br />
-                <input type="text" onChange={(e) => {setfileName(e.target.value)}} placeholder="File Description" className="placeholder-black h-10 w-64 rounded-3xl text-center border-2 border-black hover:shadow-2xl"/><br/><br />
-                <input type="text" onChange={(e) => {setName(e.target.value)}} placeholder="User Name"  className="placeholder-black h-10 w-64 rounded-3xl text-center border-2 border-black hover:shadow-2xl"/> <br /><br />
-                <input type="file" onChange={(e) => {setFile(e.target.files[0])}} className="text-white"/> <br /><br />
-                <button onClick={storage} className="h-10 w-32 bg-black text-white rounded-3xl border-2 border-white hover:text-black hover:bg-white">Upload</button>
+                <div className="lg:h-100 sm:h-auto lg:w-72 sm:w-full bg-white bg-opacity-20 rounded-3xl lg:absolute lg:left-128 sm:left-4 lg:top-72 sm:top-20">
+                    <br />
+                    <input type="text" onChange={(e) => { setfileName(e.target.value) }} placeholder="File Description" className="placeholder-black h-10 lg:w-64 sm:w-full rounded-3xl text-center border-2 border-black hover:shadow-2xl" /><br /><br />
+                    <input type="text" onChange={(e) => { setName(e.target.value) }} placeholder="User Name" className="placeholder-black h-10 lg:w-64 sm:w-full rounded-3xl text-center border-2 border-black hover:shadow-2xl" /> <br /><br />
+                    <input type="file" onChange={(e) => { setFile(e.target.files[0]) }} className="text-white lg:pl-0 pl-14" /> <br /><br />
+                    <button onClick={storage} className="h-10 w-32 bg-black text-white rounded-3xl border-2 border-white hover:text-black hover:bg-white">Upload</button>
                 </div>
-                <div className="absolute top-80 right-96 h-100 w-80 bg-white bg-opacity-20 rounded-3xl "><br />
-                    <p className="text-white">Auto File Retrival System</p><br />
-                    <input type="text" onChange={(e) => {setRetrive(e.target.value)}} placeholder="Exact Filename with Extension" className="placeholder-black rounded-3xl text-center h-10 w-72 border-2 border-black hover:shadow-2xl" /> <br /><br />
-                    <button onClick={retrive} className="h-10 w-32 bg-black text-white rounded-3xl border-2 border-white hover:text-black hover:bg-white">Retrive</button>
+                <div className="lg:absolute lg:top-80 sm:top-40 lg:right-96 sm:right-4 lg:h-100 sm:h-auto lg:w-80 sm:w-full bg-white bg-opacity-20 rounded-3xl">
+                    <br />
+                    <p className="text-white">Auto File Retrieval System</p><br />
+                    <input type="text" onChange={(e) => { setRetrive(e.target.value) }} placeholder="Exact Filename with Extension" className="placeholder-black rounded-3xl text-center h-10 w-72 lg:w-72 sm:w-full border-2 border-black hover:shadow-2xl" /> <br /><br />
+                    <button onClick={retrive} className="h-10 w-32 bg-black text-white rounded-3xl border-2 border-white hover:text-black hover:bg-white">Retrieve</button>
                 </div>
-                <p className="absolute bottom-48 right-96 h-10 w-80 pt-2 text-xl bg-black text-white rounded-full text-center " id="Message">No File Uploaded</p>
+                <p className="lg:absolute sm:relative lg:bottom-48 sm:bottom-10 lg:right-96 sm:right-4 lg:h-10 sm:h-auto lg:w-80 sm:w-full pt-10 text-xl text-black rounded-full text-center" id="Message">No File Uploaded</p>
             </center>
         </div>
     )

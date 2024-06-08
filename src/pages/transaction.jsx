@@ -56,31 +56,33 @@ function Transaction(){
 
     return(
         <div className="poppins-bold">
-          <p class="text-8xl font-normal pl-10 tracking-wide text-white poppins-bold absolute top-4 antialiased">Farmy</p>
-          <p className="absolute right-20 top-40">Beta Version v1.0A</p>
-          <div className='h-24 w-24 bg-white absolute right-12 rounded-2xl top-6'>
+          <p class="text-8xl font-normal pl-10 tracking-wide text-white poppins-bold absolute top-4 antialiased pl-6">Farmy</p>
+          <p className="absolute lg:right-20 lg:top-40 right-2 top-36 lg:opacity-100 opacity-0">Beta Version v1.0A</p>
+          <div className='h-24 w-24 bg-white absolute right-12 rounded-2xl top-6 lg:opacity-100 opacity-0'>
               <a href="/"><img src="https://png.pngtree.com/png-clipart/20230209/original/pngtree-banyan-tree-png-image_8948930.png" className='sticky h-24 w-24 top-3 right-5'/></a>
             </div>
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732090.png" alt="https://w7.pngwing.com/pngs/1022/900/png-transparent-open-opensource-source-logos-and-brands-line-filled-icon.png" className="h-10 w-10 absolute right-5 top-36" />
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732090.png" alt="https://w7.pngwing.com/pngs/1022/900/png-transparent-open-opensource-source-logos-and-brands-line-filled-icon.png" className="h-10 w-10 absolute right-5 top-36 lg:opacity-100 opacity-0" />
           <center><br />
-          <p className="text-white text-8xl shadow-trans">Transaction</p><br />
-          <input type="text" placeholder="Price" className="placeholder-black w-64 h-10 text-2xl rounded-3xl text-center border-2 border-black hover:shadow-2xl" onChange={(e)=>{setTransaction(e.target.value)}} /> <br /><br />
-          <input type="phone" placeholder="Account Number" className="placeholder-black w-64 h-10 text-2xl rounded-3xl text-center border-2 border-black hover:shadow-2xl" onChange={(e)=>{setaccNum(e.target.value)}} /> <br /><br />
-          <input type="date" className="placeholder-black w-64 h-10 rounded-3xl text-center text-2xl border-2 border-black hover:shadow-2xl" onChange={(e)=>{setDate(e.target.value)}}/> <br /><br />
-          <button onClick={tranSact} class="bg-black h-10 w-32 text-white rounded-3xl border-2 border-white hover:text-black hover:bg-white">Record</button>
-          </center>
-          <div className="h-100 w-96 bg-black text-white absolute top-52 left-2 text-sm rounded-3xl ">
+          <p className="text-white lg:text-8xl text-5xl shadow-trans">Transaction</p><br />
             <center>
-              <br />
-              <p>Account Transaction Detail Retriver System</p><br /><br />
-          <input type="text" placeholder="Account Number" className="placeholder-black text-black w-64 h-10 text-2xl rounded-3xl text-center" onChange={(e)=>{setaccNumber(e.target.value)}} /> <br /><br />
-            <button onClick={detail} className="bg-black h-8 w-32 text-white text-xl rounded-3xl border-2 border-white hover:text-black hover:bg-white">Retrive</button>
-            <button onClick={downloadInfo} className="bg-black h-8 w-32 text-white text-xl rounded-3xl border-2 border-white hover:text-black hover:bg-white">Download</button>
-            <p id="msg" className="text-2xl mt-2"></p>
+                <input type="text" placeholder="Price" className="placeholder-black lg:w-64 sm:w-full h-10 lg:mb-4 mb-1 lg:text-2xl sm:text-xl rounded-3xl text-center border-2 border-black hover:shadow-2xl" onChange={(e) => { setTransaction(e.target.value) }} /> <br />
+                <input type="phone" placeholder="Account Number" className="placeholder-black lg:w-64 sm:w-full h-10 lg:text-2xl sm:text-xl rounded-3xl text-center border-2 border-black hover:shadow-2xl" onChange={(e) => { setaccNum(e.target.value) }} /> <br />
+                <input type="date" className="placeholder-black lg:w-64 sm:w-full lg:mt-4 mt-1 h-10 rounded-3xl text-center lg:text-2xl sm:text-xl border-2 border-black hover:shadow-2xl" onChange={(e) => { setDate(e.target.value) }} /> <br />
+                <button onClick={tranSact} className="bg-black  lg:mt-4 mt-1 h-10 w-32 text-white rounded-3xl border-2 border-white hover:text-black hover:bg-white">Record</button>
             </center>
-          </div>
-          <p className="absolute bottom-34 right-128 text-3xl text-white rounded-full text-center" id="Message"></p>
-        </div>
+            <br />
+            <div className="lg:h-100 h-auto lg:w-96 w-full bg-black lg:bg-opacity-100 bg-opacity-15 text-white absolute lg:top-52 top-100 lg:left-2 left-0 text-sm rounded-3xl p-4">
+                <center>
+                    <p>Account Transaction Detail Retriever System</p><br />
+                    <input type="text" placeholder="Account Number" className="placeholder-black text-black lg:w-64 sm:w-full h-10 lg:text-2xl sm:text-xl rounded-3xl text-center" onChange={(e) => { setaccNumber(e.target.value) }} /> <br /><br />
+                    <button onClick={detail} className="bg-black h-8 w-32 text-white lg:text-xl sm:text-lg rounded-3xl border-2 border-white hover:text-black hover:bg-white">Retrieve</button>
+                    <button onClick={downloadInfo} className="bg-black h-8 w-32 text-white lg:text-xl sm:text-lg rounded-3xl border-2 border-white hover:text-black hover:bg-white">Download</button>
+                    <p id="msg" className="lg:text-2xl sm:text-xl mt-2"></p>
+                </center>
+            </div>
+            <p className="absolute lg:bottom-34 sm:bottom-10 lg:right-128 sm:right-4 text-3xl text-white rounded-full text-center" id="Message"></p>
+      </center>
+      </div>
     )
 }
 

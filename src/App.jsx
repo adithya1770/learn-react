@@ -30,17 +30,18 @@ function App() {
         <div className='h-full w-full bg-white bg-opacity-20'>
         <div class="flex h-36 w-45 bg-custom1 bg-cover bg-no-repeat bg-opacity-50 p-4">
         </div>
-        <div class="h-10 w-auto bg-white">
-            <a href="/produce"><span class="material-symbols-outlined  pl-24 pr-16 text-4xl hover:text-green-500">storefront</span></a>
-            <a href="/login"><span class="material-symbols-outlined pl-16 pr-16 text-4xl hover:text-green-500">login</span></a>
-            <a href="/weather"><span class="material-symbols-outlined pl-16 pr-16 text-4xl hover:text-green-500">cloud</span></a>
-            <a href="/plants"><span class="material-symbols-outlined pl-16 pr-16 text-4xl hover:text-green-500">grass</span></a>
-            <a href="/news"><span class="material-symbols-outlined pl-16 pr-16 text-4xl hover:text-green-500">feed</span></a>
-            <a href="/transaction"><span class="material-symbols-outlined pl-16 pr-16 text-4xl hover:text-green-500">paid</span></a>
-            <a href="/filesystem"><span class="material-symbols-outlined pl-16 pr-16 text-4xl hover:text-green-500">home_storage</span></a>
+        <div class="lg:h-10 sm:h-8 lg:w-auto sm:w-full bg-white">
+            <a href="/produce"><span class="material-symbols-outlined lg:pl-24 pl-6 lg:pr-16  sm:pr-2 lg:text-4xl sm:text-2xl hover:text-green-500">storefront</span></a>
+            <a href="/login"><span class="material-symbols-outlined lg:pl-16 pl-6 lg:pr-16 sm:pr-2  lg:text-4xl sm:text-2xl hover:text-green-500">login</span></a>
+            <a href="/weather"><span class="material-symbols-outlined lg:pl-16 pl-6 lg:pr-16 sm:pr-2 lg:text-4xl sm:text-2xl hover:text-green-500">cloud</span></a>
+            <a href="/plants"><span class="material-symbols-outlined lg:pl-16 pl-6 lg:pr-16 sm:pr-2 lg:text-4xl sm:text-2xl hover:text-green-500">grass</span></a>
+            <a href="/news"><span class="material-symbols-outlined lg:pl-16 pl-6 lg:pr-16 sm:pr-2 lg:text-4xl sm:text-2xl hover:text-green-500">feed</span></a>
+            <a href="/transaction"><span class="material-symbols-outlined lg:pl-16 pl-6 lg:pr-16 sm:pr-2 lg:text-4xl sm:text-2xl hover:text-green-500">paid</span></a>
+            <a href="/filesystem"><span class="material-symbols-outlined lg:pl-16 pl-6 lg:pr-16 sm:pr-2 lg:text-4xl sm:text-2xl hover:text-green-500">home_storage</span></a>
         </div>
+
         <div class="h-32 w-full bg-custom1 absolute bottom-0">
-          <footer className='poppins-bold text-white absolute left-10'><br />
+          <footer className='poppins-bold text-white absolute left-4'><br />
             <p><b> Adithya P S </b></p>
             <p>Contact me at:</p>
             <p><i>bytesadithya@gmail.com</i></p>
@@ -64,9 +65,9 @@ function App() {
           <Route path="/docs" element={<Docs />}/>
         </Routes>
         </div><br />
-        <a href="/docs" className='absolute bottom-3 left-10 text-white'>Documentation [Click Here]</a>
-        <div className='h-24 w-24 bg-white absolute right-12 rounded-full bottom-4'>
-        <a href="https://github.com/adithya1770/learn-react"><img src="https://www.svgrepo.com/show/368145/social-github.svg" className='h-24 w-24 sticky right-12 bottom-2'/></a>
+        <a href="/docs" className='absolute bottom-3 left-4 text-white'>Documentation [Click Here]</a>
+        <div className='h-24 w-24 bg-white absolute lg:right-12 right-3 rounded-full lg:bottom-4 bottom-5'>
+        <a href="https://github.com/adithya1770/learn-react"><img src="https://www.svgrepo.com/show/368145/social-github.svg" className='h-24 w-24 sticky lg:right-12 right-2 bottom-2'/></a>
         </div>
       </div>
       </div>

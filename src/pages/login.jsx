@@ -64,24 +64,26 @@ function Login(){
 
   return (
     <div>
-      <div className='h-24 w-24 bg-white absolute right-12 rounded-2xl top-6'>
-      <a href="/"><img src="https://png.pngtree.com/png-clipart/20230209/original/pngtree-banyan-tree-png-image_8948930.png" className='sticky h-24 w-24 top-3 right-5'/></a>
-      </div>
-      <center>
-      <p class="text-8xl font-normal pl-10 tracking-wide text-white poppins-bold absolute top-4 antialiased">Farmy</p>
-      <div>
-      <p className="text-8xl text-white shadow-trans">Accounts</p>
-      <input className="placeholder-black h-12 w-96 rounded-3xl text-center mt-5 text-3xl border-2 border-black hover:shadow-2xl" type="text" required placeholder="User Name" onChange={(e) => setUser(e.target.value)} /> <br />
-      <input className="placeholder-black h-12 w-96 rounded-3xl text-center mt-3 text-3xl border-2 border-black hover:shadow-2xl" type="email" required placeholder="Email" onChange={(e) => setEmail(e.target.value)} /> <br />
-      <input className="placeholder-black h-12 w-96 rounded-3xl text-center mt-3 text-3xl border-2 border-black hover:shadow-2xl" type="password" required placeholder="Password" onChange={(e) => setPassword(e.target.value)} /> <br />
-      <button className="bg-black h-12 w-36 text-white rounded-xl mt-3 mr-2 ml-2 text-2xl border-2 border-white hover:text-black hover:bg-white" onClick={handleSignUp}>Sign Up</button>
-      <button className="bg-black h-12 w-36 text-white rounded-xl mt-4 mr-4 ml-2 text-2xl border-2 border-white hover:text-black hover:bg-white" onClick={handleSignIn}>Sign In</button>
-      <button className="bg-black h-12 w-36 text-white rounded-xl mt-4 mr-4 text-2xl border-2 border-white hover:text-black hover:bg-white" onClick={signOut}>Sign out</button> 
-      <p id="AuthPck" className="text-3xl text-black italic absolute top-36 right-10"></p>
-      <p id="authResp" className="text-4xl text-black mt-5 italic pt-1"></p>
-      </div> 
-      </center>
-    </div>
+      <p class="text-8xl font-normal pl-6 tracking-wide text-white poppins-bold absolute top-4 antialiased">Farmy</p>
+  <div className='lg:h-24 lg:w-24 sm:h-16 sm:w-16 bg-white absolute lg:right-12 sm:right-6 rounded-2xl lg:top-6 sm:top-3 lg:opacity-100 opacity-0'>
+    <a href="/"><img src="https://png.pngtree.com/png-clipart/20230209/original/pngtree-banyan-tree-png-image_8948930.png" className='sticky h-24 w-24 top-3 right-5'/></a>
+  </div>
+  <center>
+    <div>
+      <p className="lg:text-8xl text-5xl text-white shadow-trans lg:mt-0 mt-4">Accounts</p>
+      <input className="placeholder-black lg:h-12 lg:w-96 h-8 w-64 rounded-3xl text-center lg:mt-5 mt-6 lg:text-3xl sm:text-xl border-2 border-black hover:shadow-2xl" type="text" required placeholder="User Name" onChange={(e) => setUser(e.target.value)} /> <br />
+      <input className="placeholder-black lg:h-12 lg:w-96 h-8 w-64 rounded-3xl text-center lg:mt-3 mt-4 lg:text-3xl sm:text-xl border-2 border-black hover:shadow-2xl" type="email" required placeholder="Email" onChange={(e) => setEmail(e.target.value)} /> <br />
+      <input className="placeholder-black lg:h-12 lg:w-96 h-8 w-64 rounded-3xl text-center lg:mt-3 mt-4 lg:text-3xl sm:text-xl border-2 border-black hover:shadow-2xl" type="password" required placeholder="Password" onChange={(e) => setPassword(e.target.value)} /> <br />
+      <button className="bg-black lg:h-12 lg:w-36 h-8 w-24 text-white rounded-xl lg:mt-3 mt-10 lg:mr-2 lg:ml-2 mr-1 ml-1 lg:text-2xl text-xl border-2 border-white hover:text-black hover:bg-white" onClick={handleSignUp}>Sign Up</button>
+      <button className="bg-black lg:h-12 lg:w-36 h-8 w-24 text-white rounded-xl lg:mt-4 mt-3 lg:mr-4 lg:ml-2 mr-2 ml-1 lg:text-2xl text-xl border-2 border-white hover:text-black hover:bg-white" onClick={handleSignIn}>Sign In</button>
+      <button className="bg-black lg:h-12 lg:w-36 h-8 w-24 text-white rounded-xl lg:mt-4 mt-3 lg:mr-4 mr-2 lg:text-2xl sm:text-xl border-2 border-white hover:text-black hover:bg-white" onClick={signOut}>Sign out</button> 
+      <p id="AuthPck" className="lg:text-3xl text-black italic absolute lg:top-36 top-128 shadow-xl text-3xl lg:right-10 right-44"></p>
+      <p id="authResp" className="lg:text-4xl sm:text-2xl text-black lg:mt-5 sm:mt-3 italic pt-1"></p>
+    </div> 
+  </center>
+</div>
+
+
   );
 }
 

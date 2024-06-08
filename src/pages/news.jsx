@@ -19,21 +19,21 @@ function News(){
 
     return(
           <div>
-            <div className='h-24 w-24 bg-white absolute right-12 rounded-2xl top-6'>
+            <div className='h-24 w-24 bg-white absolute right-12 rounded-2xl top-6 lg:opacity-100 opacity-0'>
               <a href="/"><img src="https://png.pngtree.com/png-clipart/20230209/original/pngtree-banyan-tree-png-image_8948930.png" className='sticky h-24 w-24 top-3 right-5'/></a>
             </div>
         <center>
-          <p class="text-8xl font-normal pl-10 tracking-wide text-white poppins-bold absolute top-4 antialiased">Farmy</p>
-          <p className="absolute right-20 top-40">Beta Version v1.0A</p>
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732090.png" alt="https://w7.pngwing.com/pngs/1022/900/png-transparent-open-opensource-source-logos-and-brands-line-filled-icon.png" className="h-10 w-10 absolute right-5 top-36" />
+          <p class="text-8xl font-normal tracking-wide text-white poppins-bold absolute top-4 antialiased pl-6">Farmy</p>
+          <p className="absolute lg:right-20 lg:top-40 right-2 top-36 lg:opacity-100 opacity-0">Beta Version v1.0A</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732090.png" alt="https://w7.pngwing.com/pngs/1022/900/png-transparent-open-opensource-source-logos-and-brands-line-filled-icon.png" className="h-10 w-10 absolute right-5 top-36 lg:opacity-100 opacity-0" />
         <div className="poppins-bold">
           <br /><p className="text-8xl text-white shadow-trans">News</p><br />
-          <p className="text-white text-4xl"><i>{newsTitle}</i></p><br />
-          <span><a href={newsLink} className="pr-10 text-white">Link to Article</a></span>
-          <a href={newsImg} className="pr-10 text-white">Click here for Image</a>
+          <p className="text-white lg:text-4xl text-3xl"><i>{newsTitle}</i></p><br />
+          <span><a href={newsLink} className="lg:pr-10 pr-6 text-white">Link to Article</a></span>
+          <a href={newsImg} className="lg:pr-10  text-white">Click here for Image</a>
           <button onClick={newsData} className="text-white text-2xl h-10 w-40 bg-black rounded-3xl border-2 border-white hover:text-black hover:bg-white">Get News!</button>
         </div>
-        <p className="absolute bottom-44 left-128 text-3xl text-white shadow-trans">Click on  <i className="pl-2 pr-2"><strong>Get News</strong></i>to Refresh News!</p>
+        <p className="absolute lg:bottom-44 lg:left-128 text-3xl bottom-36 left-2 text-white shadow-trans">Click on  <i className="pl-2 pr-2"><strong>Get News</strong></i>to Refresh News!</p>
         </center>
         </div>
     )
