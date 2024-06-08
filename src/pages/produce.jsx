@@ -49,10 +49,10 @@ function Produce(){
             <img src="https://cdn-icons-png.flaticon.com/512/732/732090.png" alt="https://w7.pngwing.com/pngs/1022/900/png-transparent-open-opensource-source-logos-and-brands-line-filled-icon.png" className="h-10 w-10 absolute right-5 top-36 lg:opacity-100 opacity-0" />
             <p className="lg:text-8xl text-white shadow-trans lg:pl-5 text-5xl pl-6">MarketPlace</p>
             <div className="lg:pl-10"><br />
-            <input type="text" placeholder="Produce Name" onChange={(e) => {setproduceName(e.target.value)}} className="placeholder-black lg:w-64 lg:h-10 text-2xl rounded-3xl text-center border-2 border-black hover:shadow-2xl"/><br /><br />
-            <input type="text" placeholder="Produce Cost" onChange={(e) => {setproduceCost(e.target.value)}} className="placeholder-black lg:w-64 lg:h-10 text-2xl rounded-3xl text-center border-2 border-black hover:shadow-2xl"/><br /><br />
-            <input type="text" placeholder="Seller Name" onChange={(e) => {setsellerName(e.target.value)}} className="placeholder-black lg:w-64 lg:h-10 text-2xl rounded-3xl text-center border-2 border-black hover:shadow-2xl" /><br /><br />
-            <input type="text" placeholder="Quantity (Kgs)" onChange={(e) => {setquantity(e.target.value)}} className="placeholder-black lg:w-64 lg:h-10 text-2xl rounded-3xl text-center border-2 border-black hover:shadow-2xl"/><br /><br />
+            <input type="text" placeholder="Produce Name" onChange={(e) => {setproduceName(e.target.value)}} className="placeholder-black lg:w-64 w-80 ml-3 lg:h-10 text-2xl rounded-3xl text-center border-2 border-black hover:shadow-2xl"/><br /><br />
+            <input type="text" placeholder="Produce Cost" onChange={(e) => {setproduceCost(e.target.value)}} className="placeholder-black lg:w-64 w-80 ml-3 lg:h-10 text-2xl rounded-3xl text-center border-2 border-black hover:shadow-2xl"/><br /><br />
+            <input type="text" placeholder="Seller Name" onChange={(e) => {setsellerName(e.target.value)}} className="placeholder-black lg:w-64 w-80 ml-3 lg:h-10 text-2xl rounded-3xl text-center border-2 border-black hover:shadow-2xl" /><br /><br />
+            <input type="text" placeholder="Quantity (Kgs)" onChange={(e) => {setquantity(e.target.value)}} className="placeholder-black lg:w-64 w-80 ml-3 lg:h-10 text-2xl rounded-3xl text-center border-2 border-black hover:shadow-2xl"/><br /><br />
             <button onClick={prod} className="text-3xl bg-black lg:h-10 lg:w-64 text-white rounded-3xl text-center absolute lg:left-80 lg:top-80 left-20 border-2 border-white hover:text-black hover:bg-white w-48">Publish</button><br />
             </div><br />
             <button onClick={downloadProd} className="text-3xl bg-black lg:h-10 lg:w-64 text-white rounded-3xl text-center absolute lg:left-80 lg:top-96 top-100 left-20 border-2 border-white hover:text-black hover:bg-white w-48">View Details</button>
