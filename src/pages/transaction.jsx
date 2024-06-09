@@ -57,11 +57,11 @@ function Transaction(){
     return(
         <div className="poppins-bold">
           <p class="text-8xl font-normal pl-10 tracking-wide text-white poppins-bold absolute top-4 antialiased pl-6">Farmy</p>
-          <p className="absolute lg:right-20 lg:top-40 right-2 top-36 lg:opacity-100 opacity-0">Beta Version v1.0A</p>
+          <p className="absolute lg:right-40 text-white lg:top-24 lg:opacity-100 opacity-0">Beta Version v1.0A</p>
           <div className='h-24 w-24 bg-white absolute right-12 rounded-2xl top-6 lg:opacity-100 opacity-0'>
               <a href="/"><img src="https://png.pngtree.com/png-clipart/20230209/original/pngtree-banyan-tree-png-image_8948930.png" className='sticky h-24 w-24 top-3 right-5'/></a>
             </div>
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732090.png" alt="https://w7.pngwing.com/pngs/1022/900/png-transparent-open-opensource-source-logos-and-brands-line-filled-icon.png" className="h-10 w-10 absolute right-5 top-36 lg:opacity-100 opacity-0" />
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732090.png" alt="https://w7.pngwing.com/pngs/1022/900/png-transparent-open-opensource-source-logos-and-brands-line-filled-icon.png" className="h-10 w-10 absolute lg:right-52 lg:top-14 lg:opacity-100 opacity-0" />
           <center><br />
           <p className="text-white lg:text-8xl text-5xl shadow-trans">Transaction</p><br />
             <center>

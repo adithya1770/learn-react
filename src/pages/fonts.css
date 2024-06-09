@@ -108,3 +108,15 @@
 .fonter{
     text-shadow: 5px 5px green;
   }
+
+.animated-text {
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.animated-text:hover {
+    color: limegreen;
+    transform: scale(1.2);
+    text-shadow: 5px 5px 16px black;
+}

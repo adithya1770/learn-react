@@ -24,8 +24,8 @@ function News(){
             </div>
         <center>
           <p class="text-8xl font-normal tracking-wide text-white poppins-bold absolute top-4 antialiased pl-6">Farmy</p>
-          <p className="absolute lg:right-20 lg:top-40 right-2 top-36 lg:opacity-100 opacity-0">Beta Version v1.0A</p>
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732090.png" alt="https://w7.pngwing.com/pngs/1022/900/png-transparent-open-opensource-source-logos-and-brands-line-filled-icon.png" className="h-10 w-10 absolute right-5 top-36 lg:opacity-100 opacity-0" />
+          <p className="absolute lg:right-40 text-white lg:top-24 lg:opacity-100 opacity-0">Beta Version v1.0A</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732090.png" alt="https://w7.pngwing.com/pngs/1022/900/png-transparent-open-opensource-source-logos-and-brands-line-filled-icon.png" className="h-10 w-10 absolute lg:right-52 lg:top-14 lg:opacity-100 opacity-0" />
         <div className="poppins-bold">
           <br /><p className="text-8xl text-white shadow-trans">News</p><br />
           <p className="text-white lg:text-4xl text-3xl"><i>{newsTitle}</i></p><br />
