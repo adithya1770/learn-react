@@ -31,7 +31,7 @@ function Produce(){
         const infoBlob = new Blob([seller, produce, cost, quantity], { type: 'text/plain' });
         const element = document.createElement("a");
         element.href = URL.createObjectURL(infoBlob);
-        element.download = "RetrivedTransactionDetails.txt";
+        element.download = "RetrivedMarketInfo.txt";
         element.click();
         const msg = document.getElementById("msg");
         msg.innerText = "File Downloaded";
