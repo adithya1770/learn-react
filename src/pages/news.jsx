@@ -28,7 +28,7 @@ function News(){
         <img src="https://cdn-icons-png.flaticon.com/512/732/732090.png" alt="https://w7.pngwing.com/pngs/1022/900/png-transparent-open-opensource-source-logos-and-brands-line-filled-icon.png" className="h-10 w-10 absolute lg:right-52 lg:top-14 lg:opacity-100 opacity-0" />
         <div className="poppins-bold">
           <br /><p className="text-8xl text-white shadow-trans">News</p><br />
-          <p className="text-white lg:text-4xl text-3xl"><i>{newsTitle}</i></p><br />
+          <p className="text-white lg:text-4xl text-2xl"><i>{newsTitle}</i></p><br />
           <span><a href={newsLink} className="lg:pr-10 pr-6 text-white">Link to Article</a></span>
           <a href={newsImg} className="lg:pr-10  text-white">Click here for Image</a>
           <button onClick={newsData} className="text-white text-2xl h-10 w-40 bg-black rounded-3xl border-2 border-white hover:text-black hover:bg-white">Get News!</button>

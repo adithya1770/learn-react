@@ -55,7 +55,7 @@ function Produce(){
             <input type="text" placeholder="Quantity (Kgs)" onChange={(e) => {setquantity(e.target.value)}} className="placeholder-black lg:w-64 w-80 ml-3 lg:h-10 text-2xl rounded-3xl text-center border-2 border-black hover:shadow-2xl"/><br /><br />
             <button onClick={prod} className="text-3xl bg-black lg:h-10 lg:w-64 text-white rounded-3xl text-center absolute lg:left-80 lg:top-80 left-20 border-2 border-white hover:text-black hover:bg-white w-48">Publish</button><br />
             </div><br />
-            <button onClick={downloadProd} className="text-3xl bg-black lg:h-10 lg:w-64 text-white rounded-3xl text-center absolute lg:left-80 lg:top-96 top-100 left-20 border-2 border-white hover:text-black hover:bg-white w-48">View Details</button>
+            <button onClick={downloadProd} className="text-3xl bg-black lg:h-10 lg:w-64 text-white rounded-3xl text-center absolute lg:left-80 lg:top-96 top-100 left-12 border-2 border-white hover:text-black hover:bg-white w-64">View Details</button>
             <div className="lg:absolute lg:right-20 lg:h-96 lg:top-52 lg:w-160 text-center bg-white rounded-3xl bg-opacity-70">
             <p className="text-center lg:absolute lg:top-20 lg:left-1 lg:text-yellow-50 lg:text-6xl lg:w-full mt-20 text-black" id="Message">Data will be visible here</p>
             </div>

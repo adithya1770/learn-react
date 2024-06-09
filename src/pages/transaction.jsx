@@ -71,7 +71,7 @@ function Transaction(){
                 <button onClick={tranSact} className="bg-black  lg:mt-4 mt-1 h-10 w-32 text-white rounded-3xl border-2 border-white hover:text-black hover:bg-white">Record</button>
             </center>
             <br />
-            <div className="lg:h-100 h-auto lg:w-96 w-full bg-black lg:bg-opacity-100 bg-opacity-15 text-white absolute lg:top-52 top-100 lg:left-2 left-0 text-sm rounded-3xl p-4">
+            <div className="lg:h-100 h-auto lg:w-96 w-full bg-black lg:bg-opacity-100 bg-opacity-15 text-white absolute lg:top-52 top-100 lg:left-2 left-0 text-sm rounded-3xl lg:p-4 p-0">
                 <center>
                     <p>Account Transaction Detail Retriever System</p><br />
                     <input type="text" placeholder="Account Number" className="placeholder-black text-black lg:w-64 sm:w-full h-10 lg:text-2xl sm:text-xl rounded-3xl text-center" onChange={(e) => { setaccNumber(e.target.value) }} /> <br /><br />
