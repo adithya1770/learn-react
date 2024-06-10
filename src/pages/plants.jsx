@@ -44,9 +44,9 @@ function Plants(){
           >
             Find
           </button>
-          <div className="absolute bottom-32 lg:bottom-12 lg:right-160 text-white text-3xl">
+          <div className="absolute bottom-96 right-2 lg:bottom-12 lg:right-160 text-white text-xl">
           <a href="./src/pages/plantNames.txt" download="Detailsaboutplants.txt">
-           Plant Details
+           PlantInfo
           </a>
           </div>
         </div>
