@@ -9,6 +9,7 @@ export default {
     extend: {
       spacing: {
         '128': '32rem',
+        '130': '34rem',
         '160': '40rem',
         '168': '44rem',
         '165': '43rem',

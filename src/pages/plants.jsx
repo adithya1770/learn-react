@@ -8,15 +8,16 @@ function Plants(){
     const [details, setPlantDetails] = useState("");
 
 
+
     const plantData = async () => {
-      for(let i=0;i<=20;i++){
+      for(let i=0;i<=99;i++){
         if(plantName===resource.query[i].name){
           setPlantImage(resource.query[i].thumbnail_url);
           setscientificName(resource.query[i].scientific_name)
           setPlantDetails(resource.query[i].description)
         }
       }
-  }
+    }
 
     return(
         <div className="poppins-bold">
@@ -43,6 +44,11 @@ function Plants(){
           >
             Find
           </button>
+          <div className="absolute bottom-32 lg:bottom-12 lg:right-160 text-white text-3xl">
+          <a href="./src/pages/plantNames.txt" download="Detailsaboutplants.txt">
+           Plant Details
+          </a>
+          </div>
         </div>
         <div className="flex flex-col lg:flex-row items-center lg:items-start mt-5 bg-white bg-opacity-95 rounded-xl shadow-lg shadow-black p-4 w-full h-44 overflow-y-scroll lg:overflow-hidden lg:h-44 lg:w-196">
           <div className="lg:flex-1 lg:pl-52">
