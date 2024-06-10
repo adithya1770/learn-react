@@ -76,7 +76,7 @@ function Login(){
       <input className="placeholder-black lg:h-12 lg:w-96 h-8 w-64 rounded-3xl text-center lg:mt-3 mt-4 lg:text-3xl sm:text-xl border-2 border-black hover:shadow-2xl" type="password" required placeholder="Password" onChange={(e) => setPassword(e.target.value)} /> <br />
       <button className="bg-black lg:h-12 lg:w-36 h-8 w-24 text-white rounded-xl lg:mt-3 mt-10 lg:mr-2 lg:ml-2 mr-1 ml-1 lg:text-2xl text-xl border-2 border-white hover:text-black hover:bg-white" onClick={handleSignUp}>Sign Up</button>
       <button className="bg-black lg:h-12 lg:w-36 h-8 w-24 text-white rounded-xl lg:mt-4 mt-3 lg:mr-4 lg:ml-2 mr-2 ml-1 lg:text-2xl text-xl border-2 border-white hover:text-black hover:bg-white" onClick={handleSignIn}>Sign In</button>
-      <button className="bg-black lg:h-12 lg:w-36 h-8 w-24 text-white rounded-xl lg:mt-4 mt-3 lg:mr-4 mr-2 lg:text-2xl sm:text-xl border-2 border-white hover:text-black hover:bg-white" onClick={signOut}>Sign out</button> 
+      <button className="bg-black lg:h-12 lg:w-36 h-8 w-24 text-white rounded-xl lg:mt-4 mt-3 lg:mr-4 mr-2 lg:text-2xl text-xl border-2 border-white hover:text-black hover:bg-white" onClick={signOut}>Sign out</button> 
       <p id="AuthPck" className="lg:text-3xl text-black italic absolute lg:top-36 top-128 shadow-xl text-3xl lg:right-10 right-44"></p>
       <p id="authResp" className="lg:text-4xl sm:text-2xl text-black lg:mt-5 sm:mt-3 italic pt-1"></p>
     </div> 

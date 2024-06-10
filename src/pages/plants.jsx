@@ -44,7 +44,7 @@ function Plants(){
             Find
           </button>
         </div>
-        <div className="flex flex-col lg:flex-row items-center lg:items-start mt-5 bg-white bg-opacity-95 rounded-xl shadow-lg shadow-black p-4 w-full h-48 overflow-y-scroll lg:overflow-hidden lg:h-44 lg:w-196">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start mt-5 bg-white bg-opacity-95 rounded-xl shadow-lg shadow-black p-4 w-full h-44 overflow-y-scroll lg:overflow-hidden lg:h-44 lg:w-196">
           <div className="lg:flex-1 lg:pl-52">
             <p className="text-black italic font-bold underline lg:pl-20 sm:pl-4">{scientificName}</p>
             <p className="text-black lg:mt-2 sm:mt-4">{details}</p>
