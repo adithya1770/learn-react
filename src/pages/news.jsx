@@ -31,7 +31,7 @@ function News(){
           <p className="text-white lg:text-4xl text-2xl"><i>{newsTitle}</i></p><br />
           <span><a href={newsLink} className="lg:pr-10 pr-6 text-white">Link to Article</a></span>
           <a href={newsImg} className="lg:pr-10  text-white">Click here for Image</a>
-          <button onClick={newsData} className="text-white text-2xl h-10 w-40 bg-black rounded-3xl border-2 border-white hover:text-black hover:bg-white">Get News!</button>
+          <button onClick={newsData} className="text-white text-2xl h-10 w-40 bg-black rounded-3xl border-2 border-white hover:text-black hover:bg-white easer">Get News!</button>
         </div>
         <p className="absolute lg:bottom-44 lg:left-128 text-3xl bottom-36 left-2 text-white shadow-trans">Click on  <i className="pl-2 pr-2"><strong>Get News</strong></i>to Refresh News!</p>
         </center>

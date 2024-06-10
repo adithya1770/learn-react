@@ -120,3 +120,11 @@
     transform: scale(1.08);
     text-shadow: 5px 5px 16px black;
 }
+
+.easer{
+  transition: transform 0.3s ease;
+}
+
+.easer:hover{
+  transform:scale(1.08);
+}

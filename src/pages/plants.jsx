@@ -33,13 +33,13 @@ function Plants(){
             type="text"
             id="plantName"
             name="plantName"
-            className="placeholder-black rounded-3xl lg:w-80 w-full lg:h-10 h-8 text-center border-2 border-black hover:shadow-2xl mb-4"
+            className="placeholder-black  easer rounded-3xl lg:w-80 w-full lg:h-10 h-8 text-center border-2 border-black hover:shadow-2xl mb-4"
             placeholder="Enter Plant Name"
             onChange={(e) => setplantName(e.target.value)}
           />
           <button
             onClick={plantData}
-            className="lg:h-10 h-20 lg:w-40 w-20 bg-black text-white rounded-3xl border-2 border-white hover:text-black hover:bg-white mt-4 lg:mt-0"
+            className="lg:h-10 h-20 lg:w-40 w-20 easer bg-black text-white rounded-3xl border-2 border-white hover:text-black hover:bg-white mt-4 lg:mt-0"
           >
             Find
           </button>
