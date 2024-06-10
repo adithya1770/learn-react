@@ -62,11 +62,6 @@ function App() {
             <p><i>bytesadithya@gmail.com</i></p>
           </footer>
         </div>
-        <div className="poppins-bold absolute bottom-5 pl-160 lg:opacity-100 opacity-0">
-                    <br /><input type="text" placeholder='Enter Feedback' class="text-black"  onChange={(e) => setfeedBack(e.target.value)} className='hover:shadow-2xl text-center placeholder-black h-10 w-64 rounded-full'/> <br />
-                    <center><button onClick={sendFeed} className='pl-5 w-20 h-10 text-center text-xl text-white rounded-full'>Send!</button>
-                    <p id="Message1" className='text-white' ></p></center>
-            </div>
         <div>
         <Routes>
           <Route path="/" element={<Home />}/>

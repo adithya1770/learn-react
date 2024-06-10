@@ -117,6 +117,6 @@
 
 .animated-text:hover {
     color: limegreen;
-    transform: scale(1.2);
+    transform: scale(1.08);
     text-shadow: 5px 5px 16px black;
 }
