@@ -11,7 +11,8 @@ function Plants(){
 
     const plantData = async () => {
       for(let i=0;i<=99;i++){
-        if(plantName===resource.query[i].name){
+        const localVar = plantName.toLowerCase();
+        if(localVar===resource.query[i].name){
           setPlantImage(resource.query[i].thumbnail_url);
           setscientificName(resource.query[i].scientific_name)
           setPlantDetails(resource.query[i].description)
