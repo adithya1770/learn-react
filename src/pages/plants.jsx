@@ -45,18 +45,17 @@ function Plants(){
           >
             Find
           </button>
-          <div className="absolute bottom-96 right-2 lg:bottom-12 lg:right-160 text-white text-xl">
-          <a href="./src/pages/plantNames.txt" download="Detailsaboutplants.txt">
-           PlantInfo
-          </a>
+          <div className="absolute bottom-96 right-2 lg:bottom-12 lg:right-168 text-white text-xl">
+          <a href="src/pages/plantNames.txt" download="plantNames.txt">PlantInfo</a>
+
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row items-center lg:items-start mt-5 bg-white bg-opacity-95 rounded-xl shadow-lg shadow-black p-4 w-full h-44 overflow-y-scroll lg:overflow-hidden lg:h-44 lg:w-196">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start mt-5 bg-white lg:overflow-y-scroll custom-scrollbar bg-opacity-95 rounded-xl shadow-lg shadow-black p-4 w-full h-44 overflow-y-scroll lg:overflow-hidden lg:h-44 lg:w-196">
           <div className="lg:flex-1 lg:pl-52">
             <p className="text-black italic font-bold underline lg:pl-20 sm:pl-4">{scientificName}</p>
-            <p className="text-black lg:mt-2 sm:mt-4">{details}</p>
+            <p className="text-black lg:mt-2 lg:ml-6 sm:mt-4">{details}</p>
           </div>
-          <div className="lg:flex-1 lg:pl-4 lg:mt-0 sm:mt-4">
+          <div className="lg:flex-1 lg:pl-12 lg:mt-0 sm:mt-4">
             <img src={plantImage} className="lg:w-64 sm:w-full lg:h-40 sm:h-auto contrast-200" />
           </div>
         </div>

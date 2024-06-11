@@ -46,11 +46,12 @@ function Filesys(){
                     <button onClick={storage} className="h-10 w-32 bg-black text-white rounded-3xl border-2 border-white hover:text-black hover:bg-white easer">Upload</button>
                 </div>
                 <div className="lg:absolute lg:top-80 sm:top-40 lg:right-96 sm:right-4 lg:h-100 sm:h-auto lg:w-80 sm:w-full bg-white bg-opacity-20 rounded-3xl">
+                    
                     <p className="text-white">Auto File Retrieval System</p><br />
                     <input type="text" onChange={(e) => { setRetrive(e.target.value) }} placeholder="Exact Filename with Extension" className="easer placeholder-black rounded-3xl text-center h-14 w-72 lg:w-72 sm:w-full border-2 border-black hover:shadow-2xl" />
                     <button onClick={retrive} className="h-10 w-32 bg-black text-white rounded-3xl border-2 lg:mt-2 border-white hover:text-black hover:bg-white easer">Retrieve</button>
                 </div>
-                <p className="lg:bottom-56 lg:left-224 lg:pl-4 pt-10 text-xl absolute bottom-36 left-24 lg:opacity-100 opacity-0 text-black" id="Message">No File Uploaded</p>
+                <p className="lg:bottom-56 lg:left-224 lg:pl-4 pt-10 text-xl absolute bottom-64 left-24 lg:opacity-100 opacity-0 text-black" id="Message">No File Uploaded</p>
             </center>
         </div>
     )
