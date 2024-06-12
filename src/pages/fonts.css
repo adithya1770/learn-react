@@ -141,3 +141,15 @@
     background-color: #f1f1f1; 
     border-radius: 6px;
   }
+
+  @keyframes example {
+    from {color: limegreen;}
+    to {color: greenyellow}
+  }
+  
+ .anime {
+    animation-name: example;
+    animation-duration: 4s;
+    text-shadow: 4px 4px 4px black;
+    animation-iteration-count: infinite;
+  }
