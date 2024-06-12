@@ -1,5 +1,6 @@
 import { useState } from "react";
 import resource from "./resource.json"
+import plantDat from "./plantNames.json"
 
 function Plants(){
     const [plantName, setplantName] = useState("")
@@ -18,6 +19,16 @@ function Plants(){
           setPlantDetails(resource.query[i].description)
         }
       }
+    }
+
+    const downloadPlants = async () => {
+      console.log(plantDat)
+      const element = document.createElement("a");
+      const file = new Blob(plantDat, {type: 'text/plain'});
+      element.href = URL.createObjectURL(file);
+      element.download = "plantInfo.txt";
+      document.body.appendChild(element);
+      element.click();
     }
 
     return(
@@ -46,8 +57,9 @@ function Plants(){
             Find
           </button>
           <div className="absolute bottom-96 right-2 lg:bottom-12 lg:right-168 text-white text-xl">
-          <a href="src/pages/plantNames.txt" download="plantNames.txt">PlantInfo</a>
-
+          <button onClick={downloadPlants}>
+            PlantInfo
+          </button>
           </div>
         </div>
         <div className="flex flex-col lg:flex-row items-center lg:items-start mt-5 bg-white lg:overflow-y-scroll custom-scrollbar bg-opacity-95 rounded-xl shadow-lg shadow-black p-4 w-full h-44 overflow-y-scroll lg:overflow-hidden lg:h-44 lg:w-196">
