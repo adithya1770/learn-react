@@ -27,4 +27,4 @@ To get started with Farmy, follow these steps:
    git clone https://github.com/adithya1770/farmy.git
 
 <img src='./assets2/image.png'/>
-<img src='./assets2/image1.png'/>
+<img src='./assets2/image2.png'/>
